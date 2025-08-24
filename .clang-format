@@ -1,0 +1,10 @@
+Language: Cpp
+BasedOnStyle: Microsoft
+AccessModifierOffset: "-4"
+PointerAlignment: Left
+UseTab: Never
+IndentWidth: 4
+TabWidth: 4
+SortIncludes: false
+AllowShortIfStatementsOnASingleLine: true
+AlwaysBreakTemplateDeclarations: Yes
