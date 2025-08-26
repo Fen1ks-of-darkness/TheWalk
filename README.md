@@ -10,13 +10,14 @@ You awake in an unfamiliar, abandoned place with no memory of how you got there.
 |--------|---------|
 | Move | `WASD` |
 | Look | `Mouse` |
-| Interact | `E` |
 | Run | `Shift` |
 | Crouch | `Ctrl` |
+| Jump | `Space` |
+| Interact | `E` |
 | Flashlight | `F` |
 
 
-## Links to demo and screenshots of game
+## Link to demo of game
 
-#### 1 Gameplay | Screenshots from game
-[video]() | [screenshots]()
+#### Gameplay video
+[video](https://youtu.be/w2Wf4GUbkUs)
