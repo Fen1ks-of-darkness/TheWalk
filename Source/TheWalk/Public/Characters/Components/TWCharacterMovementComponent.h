@@ -19,15 +19,13 @@ public:
     UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Settings")
     bool bCanMove = true;
 
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Settings")
+    TMap<ETWMovementType, float> Speeds
+    {{ETWMovementType::Walking, 200.0f},
+    {ETWMovementType::Running, 400.0f}};
+
     virtual void SetMovementType(const ETWMovementType& InMovementType) override;
     virtual float GetMaxSpeed() const override;
     virtual bool IsInAir() const override;
     virtual bool IsCrouch() const override;
-
-private:
-    UPROPERTY(EditDefaultsOnly, Category = "Settings")
-    TMap<ETWMovementType, float> Speeds{
-        {ETWMovementType::Walking, 200.0f},
-        {ETWMovementType::Running, 400.0f}
-    };
 };

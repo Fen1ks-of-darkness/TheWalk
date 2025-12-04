@@ -23,10 +23,10 @@ protected:
     UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
     float Direction = 0.0f;
 
-    UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
     float Yaw = 0.0f;
 
-    UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
     float Pitch = 0.0f;
 
     UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)

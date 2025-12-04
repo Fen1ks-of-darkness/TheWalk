@@ -74,27 +74,9 @@ void ATWPlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputC
 
     UEnhancedInputComponent* EnhancedInputComponent = Cast<UEnhancedInputComponent>(InputComponent);
     check(EnhancedInputComponent);
-    EnhancedInputComponent->BindAction(MovementAction, ETriggerEvent::Triggered, this, &ThisClass::Move);
     EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &ThisClass::Look);
     EnhancedInputComponent->BindAction(CrouchAction, ETriggerEvent::Started, this, &ThisClass::CrouchPressed);
     EnhancedInputComponent->BindAction(CrouchAction, ETriggerEvent::Completed, this, &ThisClass::CrouchReleased);
-}
-
-void ATWPlayerCharacter::Move(const FInputActionValue& ActionValue)
-{
-    FVector2D Input = ActionValue.Get<FVector2D>();
-
-    if (Controller && !FMath::IsNearlyZero(Input.SizeSquared()))
-    {
-        const FRotator ControlRotation = Controller->GetControlRotation();
-        const FRotator YawRotation(0, ControlRotation.Yaw, 0);
-
-        const FVector ForwardDirection = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::X);
-        const FVector RightDirection = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::Y);
-
-        AddMovementInput(ForwardDirection, Input.Y);
-        AddMovementInput(RightDirection, Input.X);
-    }
 }
 
 void ATWPlayerCharacter::SetMovementType(const ETWMovementType& MovementType)

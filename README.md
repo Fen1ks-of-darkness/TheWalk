@@ -14,10 +14,11 @@ You awake in an unfamiliar, abandoned place with no memory of how you got there.
 | Crouch | `Ctrl` |
 | Jump | `Space` |
 | Interact | `E` |
+| Grab Ledge | `B` |
 | Flashlight | `F` |
 
 
 ## Link to demo of game
 
 #### Gameplay video
-[video](https://youtu.be/w2Wf4GUbkUs)
+[video](https://youtu.be/w2Wf 4GUbkUs)

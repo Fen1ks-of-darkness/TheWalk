@@ -21,7 +21,7 @@ public:
             {
                 return Cast<T>(ActorComponents[0]);
             }
-            checkNoEntry();
+            //checkNoEntry();
         }
         return nullptr;
     }

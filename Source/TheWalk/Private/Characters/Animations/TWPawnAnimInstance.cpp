@@ -9,7 +9,10 @@ void UTWPawnAnimInstance::NativeInitializeAnimation()
     Super::NativeInitializeAnimation();
 
     Pawn = TryGetPawnOwner();
-    Movement = FTWHelperFunctions::GetComponentByInterface<ITWMovement>(Pawn);
+    if (Pawn)
+    {
+        Movement = FTWHelperFunctions::GetComponentByInterface<ITWMovement>(Pawn);
+    }
 }
 
 void UTWPawnAnimInstance::NativeUpdateAnimation(float DeltaSeconds)
